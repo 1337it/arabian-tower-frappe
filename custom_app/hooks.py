@@ -11,14 +11,14 @@ app_license = "MIT"
 # ------------------
 
 # include js, css files in header of desk.html
-app_include_css = "/assets/custom_app/css/homepage.css"
-app_include_js = "/assets/custom_app/js/homepage.js"
+#app_include_css = "/assets/custom_app/css/homepage.css"
+#app_include_js = "/assets/custom_app/js/homepage.js"
 
 
 # include js, css files in header of web template
-web_include_css = "/assets/custom_app/css/custom_app.css"
-web_include_css = "/assets/custom_app/css/homepage.css"
-web_include_js = "/assets/custom_app/js/homepage.js"
+#web_include_css = "/assets/custom_app/css/custom_app.css"
+#web_include_css = "/assets/custom_app/css/homepage.css"
+#web_include_js = "/assets/custom_app/js/homepage.js"
 
 
 # include custom scss in every website theme (without file extension ".scss")
@@ -29,7 +29,7 @@ web_include_js = "/assets/custom_app/js/homepage.js"
 # webform_include_css = {"doctype": "public/css/custom_app.css"}
 
 # include js in page
-page_js = {"page" : "public/js/page.js"}
+#page_js = {"page" : "public/js/page.js"}
 
 # include js in doctype views
 # doctype_js = {"doctype" : "public/js/doctype.js"}
@@ -40,7 +40,7 @@ page_js = {"page" : "public/js/page.js"}
 # ----------
 
 # application home page (will override Website Settings)
-home_page = "index"
+#home_page = "index"
 
 # website user home page (by Role)
 # role_home_page = {
