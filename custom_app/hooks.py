@@ -1,7 +1,7 @@
 from . import __version__ as app_version
 
 app_name = "custom_app"
-app_title = "arabian-tower-frappe"
+app_title = "custom_app"
 app_publisher = "Aman"
 app_description = "Custom Frappe App"
 app_email = "aman@leetitsolutions.com"
