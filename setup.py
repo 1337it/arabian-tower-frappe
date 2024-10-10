@@ -7,7 +7,7 @@ with open("requirements.txt") as f:
 from custom_app import __version__ as version
 
 setup(
-	name="arabian_tower_frappe",
+	name="custom_app",
 	version=version,
 	description="Custom Frappe App",
 	author="amanyousaf",
