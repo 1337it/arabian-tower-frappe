@@ -135,7 +135,7 @@ def tax_account_query(doctype, txt, searchfield, start, page_len, filters):
 
 @frappe.whitelist()
 @frappe.validate_and_sanitize_search_inputs
-def so_query(doctype, txt, searchfield, start, page_len, filters, as_dict=False):
+def item_query(doctype, txt, searchfield, start, page_len, filters, as_dict=False):
 	doctype = "Sales Order"
 	conditions = []
 
