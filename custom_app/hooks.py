@@ -1,6 +1,6 @@
 from . import __version__ as app_version
 
-app_name = "arabian_tower_frappe"
+app_name = "custom_app"
 app_title = "arabian-tower-frappe"
 app_publisher = "Aman"
 app_description = "Custom Frappe App"
