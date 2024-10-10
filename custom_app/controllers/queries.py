@@ -149,6 +149,7 @@ def item_query(doctype, txt, searchfield, start, page_len, filters, as_dict=Fals
                         trn_voucher.narration as narration, trn_voucher.place_of_supply as placeofsupply
 			from trn_voucher
  WHERE trn_voucher.voucher_number like %(txt)s
+ and trn_voucher.voucher_type = 'Sales Order'
  GROUP BY trn_voucher.voucher_number
  ORDER BY trn_voucher.date desc
 		limit %(start)s, %(page_len)s """.format(
