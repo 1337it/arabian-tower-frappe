@@ -141,8 +141,8 @@ def item_query(doctype, txt, searchfield, start, page_len, filters, as_dict=Fals
 
 	return frappe.db.sql(
                 """select
+		trn_voucher.voucher_number as name,
 		trn_voucher.party_name as customer,
-		trn_voucher.voucher_number as vouchernumber,
                         trn_voucher.date as date,
                         trn_voucher.narration as narration, trn_voucher.place_of_supply as placeofsupply
 			from trn_voucher
