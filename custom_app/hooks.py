@@ -116,7 +116,7 @@ app_license = "MIT"
 # hooks.py
 
 override_whitelisted_methods = {
-	"erpnext.controllers.queries.item_query": "custom_app.controllers.queries.item_query"
+	"erpnext.controllers.queries.item_query": "custom_app.controllers.queries.so_query"
 }
 # Document Events
 # ---------------
