@@ -142,7 +142,7 @@ def item_query(doctype, txt, searchfield, start, page_len, filters, as_dict=Fals
 	return frappe.db.sql(
                 """select
 		trn_inventory.item as name,
-		trn_inventory.quantity as quantity,
+		trn_inventory.quantity as quantity
 			from trn_inventory
  WHERE trn_inventory.order_number like %(txt)s
 		limit %(start)s, %(page_len)s """.format(
