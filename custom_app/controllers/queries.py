@@ -136,7 +136,32 @@ def tax_account_query(doctype, txt, searchfield, start, page_len, filters):
 @frappe.whitelist()
 @frappe.validate_and_sanitize_search_inputs
 def item_query(doctype, txt, searchfield, start, page_len, filters, as_dict=False):
-	doctype = "Customer"
+	doctype = "Item"
+	conditions = []
+
+	return frappe.db.sql(
+                """select
+		trn_inventory.item as name,
+		trn_inventory.quantity as quantity,
+			from trn_inventory
+ WHERE trn_inventory.order_number like %(txt)s
+		limit %(start)s, %(page_len)s """.format(
+			fcond=get_filters_cond('Bin', filters, []),
+		),
+		{
+			"today": nowdate(),
+			"txt": "%%%s%%" % txt,
+			"_txt": txt.replace("%", ""),
+			"start": start,
+			"page_len": page_len,
+		},
+		as_dict=as_dict,
+	)
+
+@frappe.whitelist()
+@frappe.validate_and_sanitize_search_inputs
+def so_query(doctype, txt, searchfield, start, page_len, filters, as_dict=False):
+	doctype = "Sales Order"
 	conditions = []
 
 	return frappe.db.sql(
@@ -162,7 +187,6 @@ def item_query(doctype, txt, searchfield, start, page_len, filters, as_dict=Fals
 		},
 		as_dict=as_dict,
 	)
-
 @frappe.whitelist()
 @frappe.validate_and_sanitize_search_inputs
 def bom(doctype, txt, searchfield, start, page_len, filters):
